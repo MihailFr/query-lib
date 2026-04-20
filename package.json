@@ -1,5 +1,5 @@
 {
-  "name": "my-query-lib",
+  "name": "query-lib",
   "version": "1.0.0",
   "description": "Lightweight React Query alternative",
   "main": "dist/index.js",
