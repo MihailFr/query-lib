@@ -1,7 +1,7 @@
 import { queryCache } from './cache';
 export async function fetchQuery(key, fn, options) {
     const cache = queryCache.get(key);
-    if (cache && Date.now() - cache.updatedAt < (options?.staleTime || 0)) {
+    if (cache && Date.now() - cache.updatedAt < ((options === null || options === void 0 ? void 0 : options.staleTime) || 0)) {
         return cache.data;
     }
     queryCache.set(key, { status: 'loading' });
